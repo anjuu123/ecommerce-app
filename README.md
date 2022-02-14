@@ -49,3 +49,8 @@ All time is in hours.
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 |Header| H | 4 | | |
+|Main| H | 15 | | |
+|Footer| H |2 | | |
+|Cart | H | 4 | | |
+|Make Page Responsive | H | 4 | | |
+|Total| H | 25 | | |
