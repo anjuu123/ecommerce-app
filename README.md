@@ -25,7 +25,7 @@ https://fakestoreapi.com/products
 
 -[Mobile/Tablet](https://imgur.com/9ehO0v7)
 
--[Desktop] (https://imgur.com/sysuswe)
+-[Desktop](https://imgur.com/sysuswe)
 
 -[react architecture](https://imgur.com/RGCbS2D)
 
