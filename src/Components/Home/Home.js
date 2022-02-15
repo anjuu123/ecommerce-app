@@ -3,20 +3,33 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className='hero'>
-        <div className="card bg-dark text-white border-0">
-  <img src="bg.jpg" className="card-img" alt="background"/>
-  <div className="card-img-overlay d-flex flex-column justify-content-center">
-
-      <div className='container'>
-      <h5 className="card-title display-3 fw-bolder mb-0">NEW ARRIVALS</h5>
-    <p className="card-text lead fs-2">
-        CHECK OUT ALL THE TRENDS
-    </p>
-      </div>
-   
+    <>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-</div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="bg.jpg" class="d-block w-100" alt="img" height ="600px"/>
     </div>
+    <div class="carousel-item">
+      <img src="img2.jpeg" class="d-block w-100" alt="img" height ="600px"/>
+    </div>
+    <div class="carousel-item">
+      <img src="img3.jpeg" class="d-block w-100" alt="img" height ="600px"/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </>
   )
 }
