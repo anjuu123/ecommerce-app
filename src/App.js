@@ -1,12 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
+import "./App.css";
+import Home from "./Components/Home/Home";
+import { Routes, Route } from "react-router-dom";
+import Products from "./Components/Products/Products";
+import Product from "./Components/Product/Product";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
- 
   return (
-    <div className="App">
-   <Navbar />
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={ <Product />} />
+      </Routes>
     </div>
   );
 }
