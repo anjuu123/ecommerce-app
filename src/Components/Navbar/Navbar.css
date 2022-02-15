@@ -1,0 +1,12 @@
+header{
+    background-color: black;
+    color:#fff;
+    display: flex;
+}
+
+h1{
+    text-align: left;
+    padding-top: 10px;
+    color: darkmagenta;
+}
+
