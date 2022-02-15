@@ -5,7 +5,7 @@ import Products from "./Components/Products/Products";
 import Product from "./Components/Product/Product";
 import Navbar from "./Components/Navbar/Navbar";
 
-function App() {
+export default function App() {
   return (
     <div>
       <Navbar />
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+
