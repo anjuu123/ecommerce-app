@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import './Products.css'
 
 export default function Products () {
   // creating state for products and for the product filter
@@ -44,18 +45,31 @@ const filterProduct = (cat) => {
 const ShowProducts = () => {
     return (
       <>
-        <div className="buttons d-flex justify-content-center mb-5 pb-5">
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+   Categories
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a className="dropdown-item "onClick={()=> setFilter(data)}>All</a></li>
+    <li><a className="dropdown-item "onClick={()=> filterProduct("men's clothing")}>Men's Clothing</a></li>
+    <li><a className="dropdown-item "onClick={()=> filterProduct("women's clothing")}>Women Clothing</a></li>
+    <li><a className="dropdown-item "onClick={()=> filterProduct("jewelery")}>Jeweleries</a></li>
+    <li><a className="dropdown-item "onClick={()=> filterProduct("electronics")}>Electronics</a></li>
+  </ul>
+</div>
+
+        {/* <div className="buttons d-flex justify-content-center mb-5 pb-5">
           <button className="btn btn-outline-dark me-2"onClick={()=> setFilter(data)}>All</button>
           <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("men's clothing")}>Men's Clothing</button>
           <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("women's clothing")}>Women Clothing</button>
           <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("jewelery")}>Jwelleries</button>
           <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("electronics")}>Electronic</button>
-        </div>
+        </div> */}
 
         {filter.map((product) => {
           return (
             <>
-              <div className="col-md-3 mb-4">
+              <div className="col-md-2 mb-4">
                 <div className="card h-100 text-center p-4" key={product.id}>
                   <img
                     src={product.image}
@@ -83,10 +97,11 @@ const ShowProducts = () => {
 
   return (
     <div>
+      <img src="sale.jpeg" alt="sale"/>
       <div className="container my-5 py-5">
         <div className="row">
           <div className="col-12 mb-5">
-            <h1 className="display-6 fw-bolder text-center">New Arrivals</h1>
+            <h1 className="display-6 fw-bolder text-center">Recommended for you</h1>
             <hr />
           </div>
         </div>

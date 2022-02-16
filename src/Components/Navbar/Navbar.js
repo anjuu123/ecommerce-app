@@ -22,7 +22,7 @@ export default function Navbar() {
 
 
           <Link className="navbar-brand" to="/">
-            A & A Collection
+            <h4>A & A Collection</h4>
           </Link>
 
 
@@ -43,15 +43,15 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <Link className="nav-link" to="/products">
-                 Products
+                 Shop
                 </Link>
               </li>
              
-              <li class="nav-item">
+              {/* <li class="nav-item">
               <Link className="nav-link" to="/contact">
                 Contact
               </Link>
-              </li>
+              </li> */}
             </ul>
             
             {/* <form class="d-flex">
