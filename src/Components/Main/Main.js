@@ -2,11 +2,11 @@ import React, { useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 
 export default function Main () {
-  // creating state for products and for the product filter
 
+  // creating state for products and for the single product data to display
   const [data, setData] = useState([]);
   const [single, setSingle] = useState(data);
-  let componentMounted = true;
+  
 
 
   // making the api call for the products to show in the site
@@ -15,15 +15,10 @@ export default function Main () {
   useEffect(() => {
     const getProducts = async () => {
       const response = await fetch("https://fakestoreapi.com/products?sort=desc");
-      if (componentMounted) {
         setData(await response.clone().json());
         setSingle(await response.json());
         console.log(single);
       }
-      return () => {
-        componentMounted = false;
-      };
-    };
 
     getProducts();
   }, []);
@@ -31,10 +26,10 @@ export default function Main () {
 
 
 // Displaying the product using props
+//showing product with id,image,title,price
 const ShowProducts = () => {
     return (
       <>
-
         {single.map((props) => {
           return (
             <>
@@ -64,6 +59,8 @@ const ShowProducts = () => {
     );
   };
 
+
+
   return (
     <div>
       <div className="container my-5 py-5">
@@ -73,6 +70,8 @@ const ShowProducts = () => {
             <hr />
           </div>
         </div>
+
+        {/* returns product */}
         <div className="row justify-content-center">
           {<ShowProducts />}
         </div>

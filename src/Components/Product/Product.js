@@ -7,11 +7,11 @@ export default function Product() {
   
   // creating states for product
   // using the id parameter for fetching data for single product
-
   const { id } = useParams();
   const [product, setProduct] = useState([]);
-  // fetching product data from api
 
+
+  // fetching product data from api
   useEffect(() => {
     const getProduct = async () => {
       const response = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -24,6 +24,7 @@ export default function Product() {
  
 
   //showing single product before adding to cart
+  //displaying product image,title,rating,desc,price
 
   const ShowProduct = () => {
     return (
@@ -59,6 +60,11 @@ export default function Product() {
       </>
     );
   };
+
+
+
+
+  // returns products
   return (
     <>
       <div className="container py-5">

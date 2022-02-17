@@ -1,10 +1,11 @@
+/* NAVBAR CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .navbar-brand{
     font-family: 'Lobster', cursive;
    
-    
-   
+      
 }
 
 h1{
@@ -31,7 +32,7 @@ text-align: center;
     
 }
 
-
+/* TABLET RESPONSIVE */
 @media only screen and (min-width: 768px){
     #menu{
         margin-left: 19rem;
@@ -45,7 +46,7 @@ text-align: center;
 }
 
 
-
+/* DESKTOP RESPONSIVE */
 @media only screen and (min-width: 1024px){
     #btn-cart{
         font-size: 30px;

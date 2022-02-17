@@ -2,18 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+
+
 export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container ">
          
-
+{/* HEADER LOGO */}
         <Link className="navbar-brand " to="/">
             <h1>A & A Collection</h1>
           </Link>
 
-         
+         {/* HAMBURGER MENU */}
           <button id="menu"
             className="navbar-toggler"
             type="button"
@@ -26,9 +28,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-         
-       
-
+         {/* NAVIGATION STARTS */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2">
 
@@ -43,15 +43,8 @@ export default function Navbar() {
                  Shop
                 </Link>
               </li>
-             
-              {/* <li class="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-              </li> */}
-            </ul>
-            
-             {/* <form class="d-flex">
+
+                {/* <form class="d-flex">
               <input
                 class="form-control me-2"
                 type="search"
@@ -62,10 +55,13 @@ export default function Navbar() {
                 Search
               </button>
             </form>  */}
-
+   
+            </ul>
+                 
+        </div>
         </div>
 
-        </div>
+        {/* CART BUTTON */}
         <div className="buttons" id="btn-cart">
             <Link to="/cart "  className="btn btn-outline-primary ms-2">
               <i className="fa fa-shopping-cart me-1 "id="cart"></i>0

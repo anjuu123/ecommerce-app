@@ -4,10 +4,9 @@ import './Products.css'
 
 export default function Products () {
   // creating state for products and for the product filter
-
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
-  let componentMounted = true;
+ 
 
 
   // making the api call for the products to show in the site
@@ -16,15 +15,10 @@ export default function Products () {
   useEffect(() => {
     const getProducts = async () => {
       const response = await fetch("https://fakestoreapi.com/products");
-      if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
         console.log(filter);
       }
-      return () => {
-        componentMounted = false;
-      };
-    };
 
     getProducts();
   }, []);
@@ -34,6 +28,7 @@ export default function Products () {
   
   // creating a filter for the product 
 //   filter product with their category
+// category matches than update list
 
 const filterProduct = (cat) => {
     const updatedList = data.filter((x) => x.category === cat);
@@ -41,15 +36,17 @@ const filterProduct = (cat) => {
 }
 
 
-// Displaying the product after call it from api
+// Displaying the product 
 const ShowProducts = () => {
     return (
       <>
+
+      {/* filter dropdown option for filtering category */}
+
 <div className="dropdown">
   <button className="btn btn-danger dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
    Categories
   </button>
-
   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
    <li><a className="dropdown-item "onClick={()=> setFilter(data)}>All</a></li>
     <li><a className="dropdown-item "onClick={()=> filterProduct("men's clothing")}>Men's Clothing</a></li>
@@ -90,6 +87,9 @@ const ShowProducts = () => {
     );
   };
 
+
+
+  // returns products data
   return (
     <div>
     <div className='banner '>
