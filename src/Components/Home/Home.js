@@ -23,7 +23,7 @@ export default function Home() {
           {/* 2ND IMG */}
           <div className="carousel-item">
             <img
-              src="bigsale.jpg"
+              src="img1.jpeg"
               className="d-block w-100"
               alt="img1"
               
@@ -33,7 +33,7 @@ export default function Home() {
         {/* 3RD IMG */}
           <div className="carousel-item">
             <img
-              src="jewell.jpg"
+              src="../images/jewell.jpg"
               className="d-block w-100"
               alt="img6"
                 />

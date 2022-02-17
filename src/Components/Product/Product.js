@@ -3,12 +3,13 @@ import { useParams, Link } from "react-router-dom";
 import './Product.css'
 
 
-export default function Product() {
+export default function Product(props) {
   
   // creating states for product
   // using the id parameter for fetching data for single product
   const { id } = useParams();
   const [product, setProduct] = useState([]);
+  const [cartBtn, setCartBtn] = useState("Add to Cart")
 
 
   // fetching product data from api
@@ -22,6 +23,16 @@ export default function Product() {
   });
 
  
+// change btn from add to cart to go to cart
+  const handleCart = () => {
+    if (cartBtn === "Add to Cart") {
+      setCartBtn("Go to Cart")
+    }
+    else{
+      setCartBtn("Add to Cart")
+    }
+
+  }
 
   //showing single product before adding to cart
   //displaying product image,title,rating,desc,price
@@ -49,8 +60,8 @@ export default function Product() {
             <i className="fa fa-star"></i>
           </p>
           <button
-            className="btn btn-success fw-bold px-4 py-2">
-            Add to Cart
+            className="btn btn-success fw-bold px-4 py-2"onClick={()=>handleCart()}>
+           {cartBtn}
           </button>
 
           <Link to="/products" id ="btn-info" className="btn btn-info ms-2 px-3 py-2">

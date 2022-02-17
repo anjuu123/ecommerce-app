@@ -71,7 +71,7 @@ const ShowProducts = () => {
           </div>
         </div>
 
-        {/* returns product */}
+        {/* returns */}
         <div className="row justify-content-center">
           {<ShowProducts />}
         </div>
