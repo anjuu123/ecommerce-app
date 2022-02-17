@@ -51,7 +51,7 @@ const ShowProducts = () => {
   </button>
 
   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a className="dropdown-item "onClick={()=> setFilter(data)}>All</a></li>
+   <li><a className="dropdown-item "onClick={()=> setFilter(data)}>All</a></li>
     <li><a className="dropdown-item "onClick={()=> filterProduct("men's clothing")}>Men's Clothing</a></li>
     <li><a className="dropdown-item "onClick={()=> filterProduct("women's clothing")}>Women Clothing</a></li>
     <li><a className="dropdown-item "onClick={()=> filterProduct("jewelery")}>Jeweleries</a></li>

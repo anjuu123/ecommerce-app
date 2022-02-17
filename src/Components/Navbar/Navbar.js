@@ -6,9 +6,15 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
+        <div className="container ">
          
-          <button
+
+        <Link className="navbar-brand " to="/">
+            <h1>A & A Collection</h1>
+          </Link>
+
+         
+          <button id="menu"
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -20,20 +26,15 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-
-          <Link className="navbar-brand" to="/">
-            <h4 id="brand">A & A Collection</h4>
-          </Link>
-
-
-          <div className="buttons">
-            <Link to="/cart " className="btn btn-outline-primary ms-2">
-              <i className="fa fa-shopping-cart me-1"id="cart"></i>0
+          <div className="buttons" id="btn-cart">
+            <Link to="/cart "  className="btn btn-outline-primary ms-2">
+              <i className="fa fa-shopping-cart me-1 "id="cart"></i>0
             </Link>
           </div>
+       
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2">
 
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
@@ -42,7 +43,7 @@ export default function Navbar() {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link " to="/products">
+                <Link className="nav-link fw-bold" to="/products">
                  Shop
                 </Link>
               </li>
@@ -54,7 +55,7 @@ export default function Navbar() {
               </li> */}
             </ul>
             
-             <form class="d-flex">
+             {/* <form class="d-flex">
               <input
                 class="form-control me-2"
                 type="search"
@@ -64,11 +65,12 @@ export default function Navbar() {
               <button class="btn btn-primary" type="submit">
                 Search
               </button>
-            </form> 
+            </form>  */}
 
-          </div>
         </div>
-       
+
+        </div>
+          
       </nav>
 
 

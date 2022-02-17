@@ -2,25 +2,52 @@
 
 .navbar-brand{
     font-family: 'Lobster', cursive;
+   
     
    
 }
 
-h4{
-    text-align: center;
+h1{
  background: -webkit-linear-gradient( top right, purple , darkblue);
  background-clip: text;
 -webkit-text-fill-color: transparent;
+text-align: center;
+
       
 }
 
-#brand{
-    font-size: 26px;
-    padding-left: 7px;
-}
+#menu{
+    margin-left: 2rem;
+    font-size: 20px;
+ }
+
 
 .nav-item{
     display: inline-block;
-    text-align: left;
 }
 
+#cart{
+    font-size: 20px;
+    
+}
+
+
+@media only screen and (min-width: 768px){
+    #menu{
+        margin-left: 19rem;
+        font-size: 30px;
+     }
+
+     #cart{
+        font-size: 30px;
+        
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px){
+   h1{
+       align-items: left;
+   }
+}
