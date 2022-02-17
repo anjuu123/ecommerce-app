@@ -26,11 +26,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="buttons" id="btn-cart">
-            <Link to="/cart "  className="btn btn-outline-primary ms-2">
-              <i className="fa fa-shopping-cart me-1 "id="cart"></i>0
-            </Link>
-          </div>
+         
        
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,7 +66,11 @@ export default function Navbar() {
         </div>
 
         </div>
-          
+        <div className="buttons" id="btn-cart">
+            <Link to="/cart "  className="btn btn-outline-primary ms-2">
+              <i className="fa fa-shopping-cart me-1 "id="cart"></i>0
+            </Link>
+          </div>
       </nav>
 
 

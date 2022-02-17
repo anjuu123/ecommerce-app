@@ -47,7 +47,9 @@ text-align: center;
 
 
 @media only screen and (min-width: 1024px){
-   h1{
-       align-items: left;
-   }
+    #btn-cart{
+        font-size: 30px;
+        margin-left: -40px;
+        padding-right: 20px;
+    }
 }

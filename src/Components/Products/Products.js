@@ -64,7 +64,7 @@ const ShowProducts = () => {
         {filter.map((product) => {
           return (
             <>
-              <div className="col-md-2">
+              <div className="col-md-4">
                 <div className="card h-100 text-center p-4" key={product.id}>
                   <img
                     src={product.image}
@@ -92,8 +92,8 @@ const ShowProducts = () => {
 
   return (
     <div>
-    <div className='banner'>
-    <img src="banner.gif" alt="sale" />
+    <div className='banner '>
+    <img src="banner.gif" alt="sale" className='w-100' />
       </div> 
       <div className="container my-5 py-5">
         <div className="row">

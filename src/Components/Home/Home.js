@@ -30,7 +30,7 @@ export default function Home() {
           <div className="carousel-item">
             <img
               src="jewell.jpg"
-              className="d-block w-100" id="img-slider"
+              className="d-block w-100"
               alt="img6"
              
             />
