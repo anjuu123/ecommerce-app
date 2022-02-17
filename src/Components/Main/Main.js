@@ -30,16 +30,6 @@ export default function Main () {
 
 
 
-  
-  // creating a filter for the product 
-//   filter product with their category
-
-const singleProduct = (cat) => {
-    const updatedList = cat;
-    setSingle(updatedList);
-}
-
-
 // Displaying the product using props
 const ShowProducts = () => {
     return (
@@ -48,7 +38,7 @@ const ShowProducts = () => {
         {single.map((props) => {
           return (
             <>
-              <div className="col-md-4 mb-4">
+              <div className="col-md-4 mb-4" id='card'>
                 <div className="card h-100 text-center p-4" key={props.id}>
                   <img
                     src={props.image}
@@ -61,7 +51,7 @@ const ShowProducts = () => {
                       {props.title.substring(0, 12)}
                     </h5>
                     <p className="card-text lead fw-bold">${props.price}</p>
-                    <Link to ={`/products/${props.id}`} className="btn btn-outline-dark">
+                    <Link to ={`/products/${props.id}`} id='btn-info' className="btn btn-info">
                     Shop Now
                     </Link>
                   </div>

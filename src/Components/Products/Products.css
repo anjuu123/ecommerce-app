@@ -1,6 +1,31 @@
 img{
-    width:485px;
-    height: 300px;
+    width:250px;
+    height: 200px;
 }
 
 
+.banner img{
+    height: 100px;
+    width: 375px;
+    margin-top: 20px;
+}
+
+.heading h1{
+    text-transform: uppercase;
+    margin-top: -20px;
+}
+
+.dropdown button{
+    margin: -63px 40px 50px 0px;
+    
+}
+
+.dropdown-item{
+    cursor: pointer;
+
+}
+
+#btn-buy{
+    color: #fff;
+    font-weight: bold;
+}

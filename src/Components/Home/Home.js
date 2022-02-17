@@ -34,7 +34,15 @@ export default function Home() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="bg.jpg"
+              src="sale.gif"
+              className="d-block w-100"
+              alt="img5"
+              height="500px"
+            />
+          </div>
+          <div className="carousel-item">
+            <img
+              src="bigsale.jpg"
               className="d-block w-100"
               alt="img1"
               height="500px"
@@ -42,17 +50,9 @@ export default function Home() {
           </div>
           <div className="carousel-item">
             <img
-              src="img2.jpeg"
+              src="jewell.jpg"
               className="d-block w-100"
-              alt="img2"
-              height="500px"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="img3.jpeg"
-              className="d-block w-100"
-              alt="img3"
+              alt="img6"
               height="500px"
             />
           </div>

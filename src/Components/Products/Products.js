@@ -45,11 +45,12 @@ const filterProduct = (cat) => {
 const ShowProducts = () => {
     return (
       <>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+<div className="dropdown">
+  <button className="btn btn-danger dropdown-toggle btn-lg" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
    Categories
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a className="dropdown-item "onClick={()=> setFilter(data)}>All</a></li>
     <li><a className="dropdown-item "onClick={()=> filterProduct("men's clothing")}>Men's Clothing</a></li>
     <li><a className="dropdown-item "onClick={()=> filterProduct("women's clothing")}>Women Clothing</a></li>
@@ -58,18 +59,12 @@ const ShowProducts = () => {
   </ul>
 </div>
 
-        {/* <div className="buttons d-flex justify-content-center mb-5 pb-5">
-          <button className="btn btn-outline-dark me-2"onClick={()=> setFilter(data)}>All</button>
-          <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("men's clothing")}>Men's Clothing</button>
-          <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("women's clothing")}>Women Clothing</button>
-          <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("jewelery")}>Jwelleries</button>
-          <button className="btn btn-outline-dark me-2"onClick={()=> filterProduct("electronics")}>Electronic</button>
-        </div> */}
+       
 
         {filter.map((product) => {
           return (
             <>
-              <div className="col-md-2 mb-4">
+              <div className="col-md-2">
                 <div className="card h-100 text-center p-4" key={product.id}>
                   <img
                     src={product.image}
@@ -82,7 +77,7 @@ const ShowProducts = () => {
                       {product.title.substring(0, 12)}
                     </h5>
                     <p className="card-text lead fw-bold">${product.price}</p>
-                    <Link to ={`/products/${product.id}`} className="btn btn-outline-dark">
+                    <Link to ={`/products/${product.id}`} id= "btn-buy" className="btn btn-info ">
                       Buy Now
                     </Link>
                   </div>
@@ -97,10 +92,12 @@ const ShowProducts = () => {
 
   return (
     <div>
-      <img src="sale.jpeg" alt="sale"/>
+    <div className='banner'>
+    <img src="banner.gif" alt="sale" />
+      </div> 
       <div className="container my-5 py-5">
         <div className="row">
-          <div className="col-12 mb-5">
+          <div className="col-12 mb-5 heading">
             <h1 className="display-6 fw-bolder text-center">Recommended for you</h1>
             <hr />
           </div>

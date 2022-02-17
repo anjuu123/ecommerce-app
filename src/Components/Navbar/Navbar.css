@@ -2,12 +2,21 @@
 
 .navbar-brand{
     font-family: 'Lobster', cursive;
+    
    
 }
 
 h4{
     text-align: center;
-    font-size: 30px;
+ background: -webkit-linear-gradient( top right, purple , darkblue);
+ background-clip: text;
+-webkit-text-fill-color: transparent;
+      
+}
+
+#brand{
+    font-size: 26px;
+    padding-left: 7px;
 }
 
 .nav-item{

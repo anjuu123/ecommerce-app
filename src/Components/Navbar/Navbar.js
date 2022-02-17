@@ -22,13 +22,13 @@ export default function Navbar() {
 
 
           <Link className="navbar-brand" to="/">
-            <h4>A & A Collection</h4>
+            <h4 id="brand">A & A Collection</h4>
           </Link>
 
 
           <div className="buttons">
-            <Link to="/cart " className="btn btn-outline-dark ms-2">
-              <i className="fa fa-shopping-cart me-1"></i>Cart (0)
+            <Link to="/cart " className="btn btn-outline-primary ms-2">
+              <i className="fa fa-shopping-cart me-1"id="cart"></i>0
             </Link>
           </div>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/products">
+                <Link className="nav-link " to="/products">
                  Shop
                 </Link>
               </li>
@@ -54,17 +54,17 @@ export default function Navbar() {
               </li> */}
             </ul>
             
-            {/* <form class="d-flex">
+             <form class="d-flex">
               <input
                 class="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-primary" type="submit">
                 Search
               </button>
-            </form> */}
+            </form> 
 
           </div>
         </div>
