@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector} from 'react-redux';
 import "./Navbar.css";
 
 
 
 export default function Navbar() {
+  const state = useSelector((state) => state.handleCart)
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,7 +66,7 @@ export default function Navbar() {
         {/* CART BUTTON */}
         <div className="buttons" id="btn-cart">
             <Link to="/cart "  className="btn btn-outline-primary ms-2">
-              <i className="fa fa-shopping-cart me-1 "id="cart"></i>0
+              <i className="fa fa-shopping-cart me-1 "id="cart"></i>Cart({state.length} )
             </Link>
           </div>
       </nav>

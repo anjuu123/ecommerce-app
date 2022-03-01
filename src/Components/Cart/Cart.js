@@ -1,8 +1,12 @@
-export default function Cart (props){
-    console.log(props)
-    return(
-        <div>
-            <h1>Cart</h1>
-        </div>
-    )
+import React from 'react';
+import {useSelector} from 'react-redux'
+
+const Cart = () => {
+  return (
+    <div>
+
+    </div>
+  )
 }
+
+export default Cart;

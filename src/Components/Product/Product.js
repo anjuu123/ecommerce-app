@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import {useDispatch } from "react-redux";
+import { addCart } from '../redux/action';
 import './Product.css'
 
 
@@ -9,7 +11,13 @@ export default function Product(props) {
   // using the id parameter for fetching data for single product
   const { id } = useParams();
   const [product, setProduct] = useState([]);
-  const [cartBtn, setCartBtn] = useState("Add to Cart")
+ 
+
+
+  const dispatch = useDispatch();
+  const addProduct = (product) => {
+    dispatch(addCart(product));
+  }
 
 
   // fetching product data from api
@@ -23,16 +31,7 @@ export default function Product(props) {
   });
 
  
-// change btn from add to cart to go to cart
-  const handleCart = () => {
-    if (cartBtn === "Add to Cart") {
-      setCartBtn("Go to Cart")
-    }
-    else{
-      setCartBtn("Add to Cart")
-    }
 
-  }
 
   //showing single product before adding to cart
   //displaying product image,title,rating,desc,price
@@ -60,8 +59,8 @@ export default function Product(props) {
             <i className="fa fa-star"></i>
           </p>
           <button
-            className="btn btn-success fw-bold px-4 py-2"onClick={()=>handleCart()}>
-           {cartBtn}
+            className="btn btn-success fw-bold px-4 py-2"onClick={()=>addProduct()}>
+          Add to Cart
           </button>
 
           <Link to="/products" id ="btn-info" className="btn btn-info ms-2 px-3 py-2">
