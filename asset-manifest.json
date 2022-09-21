@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ecommerce-app/static/css/main.b81b8010.css",
+    "main.css": "/ecommerce-app/static/css/main.10f778a0.css",
     "main.js": "/ecommerce-app/static/js/main.7a2fb7b7.js",
     "static/js/787.0c1a86ef.chunk.js": "/ecommerce-app/static/js/787.0c1a86ef.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/ecommerce-app/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -9,12 +9,12 @@
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/ecommerce-app/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/ecommerce-app/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/ecommerce-app/index.html",
-    "main.b81b8010.css.map": "/ecommerce-app/static/css/main.b81b8010.css.map",
+    "main.10f778a0.css.map": "/ecommerce-app/static/css/main.10f778a0.css.map",
     "main.7a2fb7b7.js.map": "/ecommerce-app/static/js/main.7a2fb7b7.js.map",
     "787.0c1a86ef.chunk.js.map": "/ecommerce-app/static/js/787.0c1a86ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b81b8010.css",
+    "static/css/main.10f778a0.css",
     "static/js/main.7a2fb7b7.js"
   ]
 }
