@@ -5,6 +5,7 @@ import "./Navbar.css";
 
 
 
+
 export default function Navbar() {
   const state = useSelector((state) => state.handleCart)
   return (
@@ -42,8 +43,9 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <Link className="nav-link fw-bold" to="/products">
-                 Shop
+                 Categories
                 </Link>
+
               </li>
 
                 {/* <form class="d-flex">

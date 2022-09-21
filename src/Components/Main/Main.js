@@ -17,7 +17,6 @@ export default function Main () {
       const response = await fetch("https://fakestoreapi.com/products?sort=desc");
         setData(await response.clone().json());
         setSingle(await response.json());
-        console.log(single);
       }
 
     getProducts();
